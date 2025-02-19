@@ -1,0 +1,720 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "LeaveMeAlone Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Test",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Test",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone Mac Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Test",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Shipping",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Shipping",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone Mac Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"Mac",
+				"Shipping",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Test",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Test",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Test",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Shipping",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Shipping",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAlone IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAlone IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAlone",
+				"IOS",
+				"Shipping",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAloneEditor Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"Debug",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAloneEditor Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"LeaveMeAloneEditor Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "LeaveMeAloneEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"LeaveMeAloneEditor",
+				"Mac",
+				"Development",
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		}
+	]
+}

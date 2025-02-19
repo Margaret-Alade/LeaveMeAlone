@@ -1,0 +1,105 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch LeaveMeAlone (Debug)",
+			"request": "launch",
+			"program": "/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+			"preLaunchTask": "LeaveMeAlone Mac Debug Build",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Launch LeaveMeAlone (DebugGame)",
+			"request": "launch",
+			"program": "/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+			"preLaunchTask": "LeaveMeAlone Mac DebugGame Build",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Launch LeaveMeAlone (Development)",
+			"request": "launch",
+			"program": "/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+			"preLaunchTask": "LeaveMeAlone Mac Development Build",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Launch LeaveMeAlone (Test)",
+			"request": "launch",
+			"program": "/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+			"preLaunchTask": "LeaveMeAlone Mac Test Build",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Launch LeaveMeAlone (Shipping)",
+			"request": "launch",
+			"program": "/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+			"preLaunchTask": "LeaveMeAlone Mac Shipping Build",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Launch LeaveMeAloneEditor (Debug)",
+			"request": "launch",
+			"program": "/Users/Shared/Epic Games/UE_5.2/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+			"preLaunchTask": "LeaveMeAloneEditor Mac Debug Build",
+			"args": [
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Launch LeaveMeAloneEditor (DebugGame)",
+			"request": "launch",
+			"program": "/Users/Shared/Epic Games/UE_5.2/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+			"preLaunchTask": "LeaveMeAloneEditor Mac DebugGame Build",
+			"args": [
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Launch LeaveMeAloneEditor (Development)",
+			"request": "launch",
+			"program": "/Users/Shared/Epic Games/UE_5.2/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+			"preLaunchTask": "LeaveMeAloneEditor Mac Development Build",
+			"args": [
+				"/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_5.2",
+			"type": "lldb"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "/Users/Shared/Epic Games/UE_5.2/Engine/Build/BatchFiles/RunUBT.bat",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=/Users/margaret/Documents/Unreal Projects/LeaveMeAlone/LeaveMeAlone.uproject",
+				"-game",
+				"-engine"
+			],
+			"console": "internalConsole",
+			"internalConsoleOptions": "openOnSessionStart",
+			"stopAtEntry": false,
+			"cwd": "/Users/Shared/Epic Games/UE_5.2"
+		}
+	]
+}
