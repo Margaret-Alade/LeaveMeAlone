@@ -9,7 +9,8 @@
 
 class UCameraComponent;
 class USpringArmComponent;
-
+class ULMAHealthComponent;
+class UAnimMontage;
 
 UCLASS()
 class LEAVEMEALONE_API ALMADefaultCharacter : public ACharacter
@@ -19,6 +20,16 @@ class LEAVEMEALONE_API ALMADefaultCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ALMADefaultCharacter();
+
+	UFUNCTION()
+	ULMAHealthComponent* GetHealthComponent() const { return HealthComponent; }
+
+	UFUNCTION(BlueprintCallable)
+	bool IsStaminaFull() const;
+
+	UFUNCTION(BlueprintCallable)
+	bool ReduceStamina(float TakenStamina);
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -39,6 +50,19 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cursor")
 	FVector CursorSize = FVector(20.0f, 40.0f, 40.0f);
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components|Health")
+	ULMAHealthComponent* HealthComponent;
+
+	UPROPERTY(EditDefaultsOnly, Category="Animation")
+	UAnimMontage* DeathMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stamina")
+	float MaxStamina = 100.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stamina|Waste")
+    float StaminaWaste = 10.0f;
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -52,9 +76,19 @@ private:
 	float MinArmLength = 300.0f;
 	float MaxArmLength = 2000.0f;
 	float FOV = 55.0f;
+	float Stamina = 0.0f;
+	FString StaminaText;
+
+	UCharacterMovementComponent* CharacterMovement = GetCharacterMovement();
 
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 	void ZoomCamera(float Value);
-	
+	void Sprint();
+	void SprintStop();
+
+	void OnDeath();
+	void OnHealthChanged(float NewHealth);
+
+	void RotationPlayerOnCursor();
 };
