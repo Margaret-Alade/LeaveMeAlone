@@ -15,16 +15,16 @@ class LEAVEMEALONE_API ULMAWeaponComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:	
-	// Sets default values for this component's properties
+
+    UFUNCTION(BlueprintCallable)
+    bool GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon) const;
+
 	ULMAWeaponComponent();
 	void Fire();
 	void StopFire();
 	void Reload();
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	UFUNCTION(BlueprintCallable)
-	bool GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon) const;
 
 protected:
 	// Called when the game starts

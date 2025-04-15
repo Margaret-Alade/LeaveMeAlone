@@ -92,7 +92,6 @@ private:
 	void SprintStop();
 
 	void OnDeath();
-	void OnHealthChanged(float NewHealth);
 
 	void RotationPlayerOnCursor();
 };
