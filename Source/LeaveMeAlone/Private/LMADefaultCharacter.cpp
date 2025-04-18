@@ -38,6 +38,8 @@ ALMADefaultCharacter::ALMADefaultCharacter()
 	HealthComponent = CreateDefaultSubobject<ULMAHealthComponent>("HealthComponent");
 	WeaponComponent = CreateDefaultSubobject<ULMAWeaponComponent>("Weapon");
 
+	Stamina = MaxStamina;
+
 }
 
 // Called when the game starts or when spawned
@@ -50,8 +52,6 @@ void ALMADefaultCharacter::BeginPlay()
 	}
 
 	HealthComponent->OnDeath.AddUObject(this, &ALMADefaultCharacter::OnDeath);
-
-	Stamina = MaxStamina;
 }
 
 // Called every frame
@@ -104,32 +104,13 @@ void ALMADefaultCharacter::Sprint()
 {
 	if(ReduceStamina(StaminaWaste)) {
 		CharacterMovement->MaxWalkSpeed = 600;
-	}	
+	}
 }
 
 void ALMADefaultCharacter::SprintStop()
 {
 	CharacterMovement->MaxWalkSpeed = 300;
 }
-
-bool ALMADefaultCharacter::IsStaminaFull() const
-{
-	return Stamina <= 0.0f;
-}
-
-
-bool ALMADefaultCharacter::ReduceStamina(float TakenStamina)
- {
-	if (IsStaminaFull()) {
-		CharacterMovement->MaxWalkSpeed = 300;
-		return false;
-	}
-
-	Stamina = FMath::Clamp(Stamina - TakenStamina, 0.0f, MaxStamina);
-	return true;
- }
-
-
 
 void ALMADefaultCharacter::OnDeath()
 {
@@ -158,3 +139,25 @@ void ALMADefaultCharacter::RotationPlayerOnCursor()
 		}
 	}
 }
+
+bool ALMADefaultCharacter::IsStaminaLeft() const
+{
+	return Stamina > 0.0f;
+}
+
+
+bool ALMADefaultCharacter::ReduceStamina(float TakenStamina)
+{
+	if (!IsStaminaLeft()) {
+		CharacterMovement->MaxWalkSpeed = 300;
+		return false;
+	}
+
+	Stamina = FMath::Clamp(Stamina - TakenStamina, 0.0f, MaxStamina);
+	return true;
+ }
+
+ bool ALMADefaultCharacter::IsMaxWalkSpeedHigh() const {
+	return CharacterMovement->MaxWalkSpeed == 600;
+ }
+

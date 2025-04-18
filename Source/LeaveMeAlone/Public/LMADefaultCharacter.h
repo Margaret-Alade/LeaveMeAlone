@@ -26,10 +26,16 @@ public:
 	ULMAHealthComponent* GetHealthComponent() const { return HealthComponent; }
 
 	UFUNCTION(BlueprintCallable)
-	bool IsStaminaFull() const;
+	float GetStamina() const { return Stamina; }
 
 	UFUNCTION(BlueprintCallable)
 	bool ReduceStamina(float TakenStamina);
+
+	UFUNCTION(BlueprintCallable)
+	bool IsStaminaLeft() const;
+
+	UFUNCTION(BlueprintCallable)
+	bool IsMaxWalkSpeedHigh() const;
 
 
 protected:
@@ -63,9 +69,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stamina")
 	float MaxStamina = 100.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stamina|Waste")
-    float StaminaWaste = 10.0f;
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "StaminaWaste")
+    float StaminaWaste = 10.0f; 
 
 public:	
 	// Called every frame
@@ -81,7 +86,6 @@ private:
 	float MaxArmLength = 2000.0f;
 	float FOV = 55.0f;
 	float Stamina = 0.0f;
-	FString StaminaText;
 
 	UCharacterMovementComponent* CharacterMovement = GetCharacterMovement();
 
